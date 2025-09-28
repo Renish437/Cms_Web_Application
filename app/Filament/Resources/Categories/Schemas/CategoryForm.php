@@ -34,11 +34,7 @@ class CategoryForm
                 Select::make('parent_id')
                 ->label(__('resource.category.fields.parent_category'))
                     ->relationship('parent', 'name'),
-                TextInput::make('sort')
-                    ->label(__('resource.category.fields.sort'))
-                    ->required()
-                    ->numeric()
-                    ->default(0),
+              
                 Toggle::make('status')
                   ->label(__('resource.category.fields.status'))
                     ->required(),
