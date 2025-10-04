@@ -53,6 +53,7 @@ return [
             'type' => "Tipo",
             'title' => "Título",
             'slug' => "Slug",
+            'categories'=>"Categorías",
             'excerpt' => "Extracto",
             'content' => "Contenido",
             'sort' => "Ordenar",

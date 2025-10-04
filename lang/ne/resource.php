@@ -59,6 +59,7 @@ return [
             'slug' => "स्लग",
             'excerpt' => "अंश",
             'sort' => "क्रमबद्ध",
+            'categories'=>"श्रेणीहरू",
             'content' => "सामग्री",
             'feature_image' => "चित्र",
             'is_featured' => "विशेष",

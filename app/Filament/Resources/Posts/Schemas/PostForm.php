@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Posts\Schemas;
 
 use App\enum\PostStatus;
 use App\enum\PostType;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -86,11 +87,19 @@ class PostForm
                                 ->options(PostStatus::class)
                                 ->default(PostStatus::DRAFT->value),
 
+                           
+
                             DateTimePicker::make('published_at')
                                 ->label(__('resource.post.fields.published_at'))
                                 ->default(now())
                                 ->required(),
-                           ])
+                           ]),
+                            CheckboxList::make('categories')
+                           ->label(__('resource.post.fields.categories'))
+                           ->relationship('categories','name',fn($query)=>$query->active())
+                           ->required()
+                           ->searchable()
+                           ->columns(2),
 
 
                         ]),

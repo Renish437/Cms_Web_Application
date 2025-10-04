@@ -55,6 +55,9 @@ return [
             'type' => "Type",
             'title' => "Title",
             "slug" => "Slug",
+            'categories'=>"Categories",
+          
+            
             'excerpt' => "Excerpt",
             'content' => "Content",
             "sort"=>"Sort",
